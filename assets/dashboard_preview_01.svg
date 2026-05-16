@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1833"/><stop offset="1" stop-color="#09111f"/></linearGradient>
+  <linearGradient id="acc" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#24a8ff"/><stop offset="1" stop-color="#45e7ff"/></linearGradient>
+  <linearGradient id="acc2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff8a1f"/><stop offset="1" stop-color="#ffbf68"/></linearGradient>
+</defs>
+<rect width="1200" height="760" rx="28" fill="url(#bg)"/>
+<rect x="24" y="24" width="1152" height="70" rx="18" fill="#0f2244" stroke="#214672"/>
+<circle cx="62" cy="58" r="8" fill="#ff6565"/><circle cx="88" cy="58" r="8" fill="#ffc857"/><circle cx="114" cy="58" r="8" fill="#4ad295"/>
+<rect x="160" y="44" width="230" height="28" rx="14" fill="#162c52"/>
+<rect x="945" y="42" width="195" height="30" rx="15" fill="#142946" stroke="#305582"/>
+<rect x="36" y="120" width="215" height="120" rx="24" fill="#102141" stroke="#214672"/>
+<rect x="273" y="120" width="215" height="120" rx="24" fill="#102141" stroke="#214672"/>
+<rect x="510" y="120" width="215" height="120" rx="24" fill="#102141" stroke="#214672"/>
+<rect x="747" y="120" width="215" height="120" rx="24" fill="#102141" stroke="#214672"/>
+<rect x="984" y="120" width="180" height="120" rx="24" fill="#102141" stroke="#214672"/>
+<text x="60" y="160" fill="#8fb1db" font-family="Arial" font-size="22">Mailing</text><text x="60" y="208" fill="#f2f7ff" font-family="Arial" font-size="38" font-weight="700">355.540</text>
+<text x="297" y="160" fill="#8fb1db" font-family="Arial" font-size="22">Discado</text><text x="297" y="208" fill="#f2f7ff" font-family="Arial" font-size="38" font-weight="700">96.189</text>
+<text x="534" y="160" fill="#8fb1db" font-family="Arial" font-size="22">Atendidas</text><text x="534" y="208" fill="#f2f7ff" font-family="Arial" font-size="38" font-weight="700">3.319</text>
+<text x="771" y="160" fill="#8fb1db" font-family="Arial" font-size="22">CPC</text><text x="771" y="208" fill="#f2f7ff" font-family="Arial" font-size="38" font-weight="700">1.278</text>
+<text x="1006" y="160" fill="#8fb1db" font-family="Arial" font-size="22">Conversão</text><text x="1006" y="208" fill="#f2f7ff" font-family="Arial" font-size="38" font-weight="700">21,2%</text>
+<rect x="36" y="270" width="700" height="220" rx="28" fill="#102141" stroke="#214672"/>
+<text x="60" y="310" fill="#f2f7ff" font-family="Arial" font-size="28" font-weight="700">Produção hora x hora</text>
+<polyline points="80,430 150,395 220,360 290,365 360,330 430,314 500,292 570,305 640,275 700,250" fill="none" stroke="url(#acc)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="80,450 150,432 220,424 290,410 360,405 430,400 500,384 570,376 640,366 700,350" fill="none" stroke="url(#acc2)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+<g fill="#24a8ff"> <circle cx="80" cy="430" r="6"/><circle cx="150" cy="395" r="6"/><circle cx="220" cy="360" r="6"/><circle cx="290" cy="365" r="6"/><circle cx="360" cy="330" r="6"/><circle cx="430" cy="314" r="6"/><circle cx="500" cy="292" r="6"/><circle cx="570" cy="305" r="6"/><circle cx="640" cy="275" r="6"/><circle cx="700" cy="250" r="6"/></g>
+<g fill="#93abc9" font-family="Arial" font-size="16"><text x="70" y="465">08h</text><text x="140" y="465">09h</text><text x="210" y="465">10h</text><text x="280" y="465">11h</text><text x="350" y="465">12h</text><text x="420" y="465">13h</text><text x="490" y="465">14h</text><text x="560" y="465">15h</text><text x="630" y="465">16h</text><text x="690" y="465">17h</text></g>
+<rect x="760" y="270" width="404" height="220" rx="28" fill="#102141" stroke="#214672"/>
+<text x="784" y="310" fill="#f2f7ff" font-family="Arial" font-size="28" font-weight="700">Funil</text>
+<path d="M825 340H1100L1045 380H880Z" fill="#19385e"/><path d="M855 390H1068L1022 430H900Z" fill="#1f507c"/><path d="M885 440H1038L998 478H920Z" fill="#24a8ff" opacity="0.9"/>
+<text x="820" y="366" fill="#dbe9ff" font-family="Arial" font-size="18">Mailing 355k</text><text x="850" y="417" fill="#dbe9ff" font-family="Arial" font-size="18">Atendidas 3,3k</text><text x="882" y="466" fill="#ffffff" font-family="Arial" font-size="18">Acordos 703</text>
+<rect x="36" y="520" width="1128" height="200" rx="28" fill="#102141" stroke="#214672"/>
+<text x="60" y="560" fill="#f2f7ff" font-family="Arial" font-size="28" font-weight="700">Tabulações</text>
+<rect x="60" y="590" width="1060" height="18" rx="9" fill="#0d1831"/>
+<rect x="60" y="590" width="700" height="18" rx="9" fill="url(#acc)"/>
+<rect x="60" y="625" width="1060" height="18" rx="9" fill="#0d1831"/>
+<rect x="60" y="625" width="550" height="18" rx="9" fill="#31d0aa"/>
+<rect x="60" y="660" width="1060" height="18" rx="9" fill="#0d1831"/>
+<rect x="60" y="660" width="430" height="18" rx="9" fill="url(#acc2)"/>
+<g fill="#dbe9ff" font-family="Arial" font-size="18"><text x="60" y="584">Busy</text><text x="60" y="619">No Answer</text><text x="60" y="654">Contato</text><text x="1080" y="604">66%</text><text x="1080" y="639">52%</text><text x="1080" y="674">41%</text></g>
+</svg>

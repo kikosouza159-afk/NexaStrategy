@@ -1,22 +1,18 @@
-Nexa Strategy Portfolio Site V1
+Nexa Strategy - Portfólio V2
 
-Arquivos inclusos:
+Conteúdo:
+- index.html -> site principal da Nexa Strategy
+- assets/ -> previews visuais de dashboards em SVG
+- modelos_empresa/ -> 3 modelos de site para empresa
+- package.json -> build para Render
+- render.yaml -> referência de configuração
 
-1. index.html
-   Site principal da Nexa Strategy, estilo portfólio institucional.
+No Render:
+- Tipo: Static Site
+- Build Command: npm run build
+- Publish Directory: dist
 
-2. modelos_supermercado/supermercado_modelo_01.html
-   Modelo de site para supermercado com visual vermelho e amarelo, foco em ofertas, delivery e app.
-
-3. modelos_supermercado/supermercado_modelo_02.html
-   Outro modelo de supermercado, com vitrine digital, encarte e pedido via WhatsApp.
-
-Como usar:
-- Abra o arquivo index.html no navegador para visualizar o site principal.
-- Abra os arquivos dentro da pasta modelos_supermercado para ver os modelos extras.
-- Para subir no GitHub/Render, envie a pasta completa.
-
-Ajustes importantes:
-- Trocar o número do WhatsApp em todos os links https://wa.me/5500000000000
-- Trocar o e-mail contato@NexaStrategy.net caso queira outro e-mail.
-- Substituir os projetos fictícios pelos projetos reais da Nexa Strategy.
+Observações da V2:
+- Fundo animado/interativo com partículas no mouse
+- Cards com dashboards visíveis
+- Modelos de site empresariais no lugar dos modelos de supermercado

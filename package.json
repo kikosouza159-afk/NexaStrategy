@@ -1,16 +1,11 @@
 {
   "name": "nexa-strategy-portfolio",
-  "version": "1.1.0",
-  "description": "Site institucional e portfólio da Nexa Strategy",
+  "version": "2.0.0",
+  "description": "Site institucional e portfólio da Nexa Strategy - V2",
   "scripts": {
-    "build": "rm -rf dist && mkdir -p dist && cp -r index.html modelos_supermercado dist/"
+    "build": "rm -rf dist && mkdir -p dist && cp -r index.html assets modelos_empresa dist/"
   },
-  "keywords": [
-    "nexa",
-    "strategy",
-    "portfolio",
-    "site"
-  ],
+  "keywords": ["nexa", "strategy", "portfolio", "site", "render"],
   "author": "Nexa Strategy",
   "license": "MIT"
 }

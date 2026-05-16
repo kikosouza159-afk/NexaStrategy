@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: nexa-strategy-portfolio
+    name: nexastrategy-static-site
     runtime: static
     buildCommand: npm run build
-    staticPublishPath: ./dist
+    staticPublishPath: dist
