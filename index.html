@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nexa Strategy | Portfólio V2</title>
-  <meta name="description" content="Site portfólio institucional da Nexa Strategy com visual interativo, dashboards visíveis e modelos de site para empresas.">
+  <title>Nexa Strategy | Soluções Digitais para Empresas</title>
+  <meta name="description" content="Soluções digitais da Nexa Strategy para fortalecer marcas, valorizar resultados e ampliar a presença comercial de empresas.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#06111f;--bg2:#09182c;--panel:rgba(10,22,41,.72);--panel-strong:rgba(255,255,255,.08);--line:rgba(255,255,255,.12);--text:#f5f8fe;--muted:#98abc7;--blue:#24a8ff;--cyan:#45e7ff;--orange:#ff8a1f;--green:#31d0aa;--shadow:0 24px 80px rgba(0,0,0,.35)}
+    :root{--bg:#06111f;--bg2:#09182c;--panel:rgba(10,22,41,.72);--panel-strong:rgba(255,255,255,.08);--line:rgba(255,255,255,.12);--text:#f5f8fe;--muted:#98abc7;--blue:#24a8ff;--cyan:#45e7ff;--orange:#ff8a1f;--green:#31d0aa;--shadow:0 24px 80px rgba(0,0,0,.35);--whatsapp:#25D366;--whatsapp-dark:#128C7E}
     *{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth} body{font-family:Inter,sans-serif;color:var(--text);background:radial-gradient(circle at top left,rgba(36,168,255,.18),transparent 24%),radial-gradient(circle at bottom right,rgba(255,138,31,.12),transparent 24%),linear-gradient(135deg,var(--bg),var(--bg2));overflow-x:hidden;min-height:100vh}
     canvas#bgCanvas{position:fixed;inset:0;z-index:-3}
     .noise,.grid,.glow{position:fixed;inset:0;pointer-events:none}.grid{z-index:-2;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(circle at center,black 22%,transparent 78%);animation:drift 16s linear infinite}.glow{z-index:-1;background:radial-gradient(circle at 20% 20%,rgba(69,231,255,.12),transparent 28%),radial-gradient(circle at 80% 30%,rgba(255,138,31,.10),transparent 24%),radial-gradient(circle at 50% 85%,rgba(49,208,170,.08),transparent 26%)}
@@ -19,7 +19,7 @@
     .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
     .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)} .brand-mark{width:44px;height:44px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--orange));font-size:22px;font-weight:900;box-shadow:0 10px 32px rgba(36,168,255,.24)} .brand-copy strong{display:block;font-size:18px;letter-spacing:-.04em}.brand-copy span{display:block;font-size:12px;color:var(--muted)}
     .nav-links{display:flex;align-items:center;gap:22px}.nav-links a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px}.nav-links a:hover{color:var(--text)} .menu-toggle{display:none;background:rgba(255,255,255,.08);border:1px solid var(--line);color:#fff;border-radius:12px;padding:10px 12px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:0 20px;min-height:46px;border-radius:999px;text-decoration:none;font-weight:800;transition:.25s;border:1px solid transparent}.btn.primary{background:linear-gradient(135deg,var(--orange),#ffb86f);color:#101010;box-shadow:0 16px 38px rgba(255,138,31,.28)}.btn.secondary{background:rgba(255,255,255,.07);color:var(--text);border-color:var(--line)}.btn:hover{transform:translateY(-2px)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:0 20px;min-height:46px;border-radius:999px;text-decoration:none;font-weight:800;transition:.25s;border:1px solid transparent}.btn.primary{background:linear-gradient(135deg,var(--orange),#ffb86f);color:#101010;box-shadow:0 16px 38px rgba(255,138,31,.28)}.btn.secondary{background:rgba(255,255,255,.07);color:var(--text);border-color:var(--line)}.btn.whatsapp{background:linear-gradient(135deg,var(--whatsapp),#67e08a);color:#062610;box-shadow:0 16px 38px rgba(37,211,102,.28)}.btn.whatsapp svg{width:18px;height:18px;fill:currentColor}.btn:hover{transform:translateY(-2px)}
     .hero{padding:88px 0 72px}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center}.tag{display:inline-flex;align-items:center;gap:10px;padding:10px 15px;background:rgba(69,231,255,.08);border:1px solid rgba(69,231,255,.18);border-radius:999px;font-size:13px;font-weight:700;color:#dffcff;margin-bottom:22px}.tag i{width:8px;height:8px;background:var(--green);border-radius:50%;box-shadow:0 0 18px var(--green)}
     h1{font-size:clamp(42px,6vw,76px);line-height:.95;letter-spacing:-.075em;margin-bottom:22px}.grad{background:linear-gradient(135deg,var(--blue),var(--cyan),var(--orange));-webkit-background-clip:text;background-clip:text;color:transparent} .hero p{font-size:18px;line-height:1.75;color:var(--muted);max-width:640px;margin-bottom:30px}
     .actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:28px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.stat{padding:18px;border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.05)}.stat strong{display:block;font-size:28px;letter-spacing:-.04em}.stat span{display:block;color:var(--muted);font-size:13px;margin-top:6px}
@@ -29,9 +29,14 @@
     .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.project-card{background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:28px;padding:18px;transition:.25s}.project-card:hover{transform:translateY(-5px);background:rgba(255,255,255,.08)} .project-thumb{border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.12);margin-bottom:16px;background:#081321}.project-thumb img{display:block;width:100%;height:auto} .project-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.project-tags span{padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;font-weight:700;color:#ddecff}
     .company-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.company-preview{display:flex;flex-direction:column;height:100%;gap:14px} .mini-frame{border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.12);background:#09111d;padding:14px} .mini-top{display:flex;gap:7px;margin-bottom:12px}.mini-top span{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.24)} .mini-hero{height:110px;border-radius:18px;background:linear-gradient(135deg,rgba(36,168,255,.28),rgba(255,138,31,.22));margin-bottom:12px;position:relative;overflow:hidden}.mini-hero:after{content:"";position:absolute;right:-20px;top:-18px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.16)} .mini-line{height:10px;border-radius:999px;background:rgba(255,255,255,.12);margin-bottom:10px}.mini-line.w1{width:54%}.mini-line.w2{width:74%}.mini-line.w3{width:100%} .mini-columns{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}.mini-box{height:56px;border-radius:14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08)}
     .process{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:step}.step{position:relative;min-height:210px}.step:before{counter-increment:step;content:"0" counter(step);position:absolute;right:20px;top:14px;font-size:42px;font-weight:900;color:rgba(255,255,255,.08)}
-    .cta{padding:40px;border-radius:34px;background:linear-gradient(135deg,rgba(36,168,255,.18),rgba(255,138,31,.14));border:1px solid rgba(255,255,255,.12);display:grid;grid-template-columns:1fr auto;align-items:center;gap:24px;box-shadow:var(--shadow)} .cta p{color:var(--muted);line-height:1.7;margin-top:12px;max-width:700px}
+    
+    .contact-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:20px}.contact-card{padding:28px;border-radius:30px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);box-shadow:var(--shadow)}
+    .contact-card h3{font-size:28px;letter-spacing:-.04em;margin-bottom:10px}.contact-card p{color:var(--muted);line-height:1.75;margin-bottom:18px}
+    .form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.field{display:flex;flex-direction:column;gap:8px}.field.full{grid-column:1/-1}.field label{font-size:13px;font-weight:700;color:#d7e7fb}.field input,.field textarea{width:100%;padding:14px 16px;border-radius:16px;border:1px solid rgba(255,255,255,.1);background:rgba(3,8,16,.78);color:#fff;font:inherit;outline:none}.field textarea{min-height:180px;resize:vertical}.helper{font-size:12px;color:var(--muted)}
+    .whatsapp-box{display:flex;flex-direction:column;justify-content:space-between;height:100%;gap:22px}.whatsapp-card{padding:22px;border-radius:24px;background:linear-gradient(135deg,rgba(37,211,102,.18),rgba(18,140,126,.18));border:1px solid rgba(255,255,255,.12)}
+
     footer{padding:34px 0;border-top:1px solid rgba(255,255,255,.08);color:var(--muted)} .footer-row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.footer-row a{color:var(--text);text-decoration:none;font-weight:700}
-    @media (max-width: 980px){.hero-grid,.cta{grid-template-columns:1fr}.service-grid,.process{grid-template-columns:repeat(2,1fr)}.project-grid,.company-grid{grid-template-columns:1fr}.hero-visual{order:-1}}
+    @media (max-width: 980px){.hero-grid,.contact-grid{grid-template-columns:1fr}.service-grid,.process{grid-template-columns:repeat(2,1fr)}.project-grid,.company-grid{grid-template-columns:1fr}.hero-visual{order:-1}}
     @media (max-width: 720px){.container{width:min(100% - 28px,1180px)}.menu-toggle{display:inline-flex}.nav-links{position:absolute;top:78px;left:14px;right:14px;display:none;flex-direction:column;align-items:stretch;padding:18px;background:rgba(5,12,22,.96);border:1px solid var(--line);border-radius:20px}.nav-links.open{display:flex}.hero{padding-top:56px}.stats,.service-grid,.process{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:12px}.cta{padding:28px}}
   </style>
 </head>
@@ -44,16 +49,16 @@
     <div class="container nav">
       <a href="#inicio" class="brand">
         <div class="brand-mark">N</div>
-        <div class="brand-copy"><strong>Nexa Strategy</strong><span>Estratégia conectada ao futuro</span></div>
+        <div class="brand-copy"><strong>Nexa Strategy</strong><span>Soluções digitais para empresas que querem crescer com mais presença e credibilidade</span></div>
       </a>
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       <nav class="nav-links" id="navLinks">
         <a href="#servicos">Serviços</a>
         <a href="#projetos">Projetos</a>
-        <a href="#modelos">Modelos</a>
-        <a href="#processo">Processo</a>
+        <a href="#modelos">Segmentos</a>
+        <a href="#processo">Diferenciais</a>
         <a href="#contato">Contato</a>
-        <a class="btn primary" href="https://wa.me/5500000000000?text=Olá,%20quero%20conhecer%20a%20Nexa%20Strategy" target="_blank">Falar agora</a>
+        <a class="btn whatsapp" href="https://wa.me/5511932147078?text=Olá,%20tenho%20interesse%20nas%20soluções%20da%20Nexa%20Strategy" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M19.11 17.19c-.27-.14-1.61-.79-1.86-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.19-1.33-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.48-.84-2.03-.22-.53-.44-.45-.61-.46h-.52c-.18 0-.48.07-.73.34s-.96.93-.96 2.26.98 2.61 1.11 2.79c.14.18 1.92 2.93 4.64 4.1.65.28 1.16.45 1.55.57.65.21 1.25.18 1.72.11.52-.08 1.61-.66 1.84-1.3.23-.64.23-1.18.16-1.3-.06-.11-.25-.18-.52-.32Z"></path><path d="M16.02 3.2c-6.99 0-12.66 5.66-12.66 12.64 0 2.23.58 4.4 1.69 6.32L3.2 28.8l6.81-1.79a12.71 12.71 0 0 0 6 1.52h.01c6.98 0 12.65-5.67 12.65-12.65A12.65 12.65 0 0 0 16.02 3.2Zm0 22.99h-.01a10.42 10.42 0 0 1-5.31-1.45l-.38-.22-4.04 1.06 1.08-3.94-.25-.4a10.38 10.38 0 0 1-1.6-5.55c0-5.75 4.68-10.42 10.44-10.42 2.79 0 5.41 1.09 7.38 3.05a10.35 10.35 0 0 1 3.05 7.37c0 5.76-4.68 10.43-10.43 10.43Z"></path></svg>WhatsApp</a>
       </nav>
     </div>
   </header>
@@ -62,22 +67,22 @@
     <section class="hero" id="inicio">
       <div class="container hero-grid">
         <div>
-          <div class="tag"><i></i> Portfólio V2 com visual mais vivo e interativo</div>
+          <div class="tag"><i></i> Soluções digitais para fortalecer sua marca, valorizar sua apresentação e gerar mais oportunidades.</div>
           <h1>Fortaleça a presença da sua empresa com uma comunicação <span class="grad">mais estratégica, profissional e convincente</span>.</h1>
-          <p>A Nexa Strategy entrega sites institucionais, dashboards executivos, páginas comerciais e soluções web com foco em apresentação, performance e clareza de informação. Esta versão traz fundo animado, previews reais de dashboard e modelos de sites empresariais.</p>
+          <p>A Nexa Strategy entrega sites institucionais, dashboards executivos, páginas comerciais e soluções digitais com foco em apresentação, performance e clareza de informação para fortalecer a presença da sua empresa.</p>
           <div class="actions">
-            <a class="btn primary" href="#projetos">Ver dashboards</a>
-            <a class="btn secondary" href="#modelos">Ver modelos de site</a>
+            <a class="btn primary" href="#projetos">Ver soluções</a>
+            <a class="btn whatsapp" href="https://wa.me/5511932147078?text=Olá,%20tenho%20interesse%20nas%20soluções%20da%20Nexa%20Strategy" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M19.11 17.19c-.27-.14-1.61-.79-1.86-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.19-1.33-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.48-.84-2.03-.22-.53-.44-.45-.61-.46h-.52c-.18 0-.48.07-.73.34s-.96.93-.96 2.26.98 2.61 1.11 2.79c.14.18 1.92 2.93 4.64 4.1.65.28 1.16.45 1.55.57.65.21 1.25.18 1.72.11.52-.08 1.61-.66 1.84-1.3.23-.64.23-1.18.16-1.3-.06-.11-.25-.18-.52-.32Z"></path><path d="M16.02 3.2c-6.99 0-12.66 5.66-12.66 12.64 0 2.23.58 4.4 1.69 6.32L3.2 28.8l6.81-1.79a12.71 12.71 0 0 0 6 1.52h.01c6.98 0 12.65-5.67 12.65-12.65A12.65 12.65 0 0 0 16.02 3.2Zm0 22.99h-.01a10.42 10.42 0 0 1-5.31-1.45l-.38-.22-4.04 1.06 1.08-3.94-.25-.4a10.38 10.38 0 0 1-1.6-5.55c0-5.75 4.68-10.42 10.44-10.42 2.79 0 5.41 1.09 7.38 3.05a10.35 10.35 0 0 1 3.05 7.37c0 5.76-4.68 10.43-10.43 10.43Z"></path></svg>Falar no WhatsApp</a>
           </div>
           <div class="stats">
             <div class="stat"><strong>+20</strong><span>ideias de páginas e projetos</span></div>
-            <div class="stat"><strong>3</strong><span>previews reais de dashboards</span></div>
-            <div class="stat"><strong>V2</strong><span>layout mais dinâmico</span></div>
+            <div class="stat"><strong>3</strong><span>frentes para apresentar resultados com mais impacto</span></div>
+            <div class="stat"><strong>360°</strong><span>visão estratégica, visual e comercial para o seu negócio</span></div>
           </div>
         </div>
         <div class="hero-visual">
-          <div class="browser"><div class="dots"><span></span><span></span><span></span></div><small>www.NexaStrategy.net</small></div>
-          <div class="screen"><img src="assets/dashboard_preview_01.svg" alt="Preview de dashboard executivo"></div>
+          <div class="browser"><div class="dots"><span></span><span></span><span></span></div><small>www.nexastrategy.onrender.com</small></div>
+          <div class="screen"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9Ijc2MCIgdmlld0JveD0iMCAwIDEyMDAgNzYwIj4KPGRlZnM+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzBiMTgzMyIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzA5MTExZiIvPjwvbGluZWFyR3JhZGllbnQ+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJhY2MiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIwIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyNGE4ZmYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM0NWU3ZmYiLz48L2xpbmVhckdyYWRpZW50PgogIDxsaW5lYXJHcmFkaWVudCBpZD0iYWNjMiIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjAiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2ZmOGExZiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZmYmY2OCIvPjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNzYwIiByeD0iMjgiIGZpbGw9InVybCgjYmcpIi8+CjxyZWN0IHg9IjI0IiB5PSIyNCIgd2lkdGg9IjExNTIiIGhlaWdodD0iNzAiIHJ4PSIxOCIgZmlsbD0iIzBmMjI0NCIgc3Ryb2tlPSIjMjE0NjcyIi8+CjxjaXJjbGUgY3g9IjYyIiBjeT0iNTgiIHI9IjgiIGZpbGw9IiNmZjY1NjUiLz48Y2lyY2xlIGN4PSI4OCIgY3k9IjU4IiByPSI4IiBmaWxsPSIjZmZjODU3Ii8+PGNpcmNsZSBjeD0iMTE0IiBjeT0iNTgiIHI9IjgiIGZpbGw9IiM0YWQyOTUiLz4KPHJlY3QgeD0iMTYwIiB5PSI0NCIgd2lkdGg9IjIzMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjMTYyYzUyIi8+CjxyZWN0IHg9Ijk0NSIgeT0iNDIiIHdpZHRoPSIxOTUiIGhlaWdodD0iMzAiIHJ4PSIxNSIgZmlsbD0iIzE0Mjk0NiIgc3Ryb2tlPSIjMzA1NTgyIi8+CjxyZWN0IHg9IjM2IiB5PSIxMjAiIHdpZHRoPSIyMTUiIGhlaWdodD0iMTIwIiByeD0iMjQiIGZpbGw9IiMxMDIxNDEiIHN0cm9rZT0iIzIxNDY3MiIvPgo8cmVjdCB4PSIyNzMiIHk9IjEyMCIgd2lkdGg9IjIxNSIgaGVpZ2h0PSIxMjAiIHJ4PSIyNCIgZmlsbD0iIzEwMjE0MSIgc3Ryb2tlPSIjMjE0NjcyIi8+CjxyZWN0IHg9IjUxMCIgeT0iMTIwIiB3aWR0aD0iMjE1IiBoZWlnaHQ9IjEyMCIgcng9IjI0IiBmaWxsPSIjMTAyMTQxIiBzdHJva2U9IiMyMTQ2NzIiLz4KPHJlY3QgeD0iNzQ3IiB5PSIxMjAiIHdpZHRoPSIyMTUiIGhlaWdodD0iMTIwIiByeD0iMjQiIGZpbGw9IiMxMDIxNDEiIHN0cm9rZT0iIzIxNDY3MiIvPgo8cmVjdCB4PSI5ODQiIHk9IjEyMCIgd2lkdGg9IjE4MCIgaGVpZ2h0PSIxMjAiIHJ4PSIyNCIgZmlsbD0iIzEwMjE0MSIgc3Ryb2tlPSIjMjE0NjcyIi8+Cjx0ZXh0IHg9IjYwIiB5PSIxNjAiIGZpbGw9IiM4ZmIxZGIiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyMiI+TWFpbGluZzwvdGV4dD48dGV4dCB4PSI2MCIgeT0iMjA4IiBmaWxsPSIjZjJmN2ZmIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMzgiIGZvbnQtd2VpZ2h0PSI3MDAiPjM1NS41NDA8L3RleHQ+Cjx0ZXh0IHg9IjI5NyIgeT0iMTYwIiBmaWxsPSIjOGZiMWRiIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjIiPkRpc2NhZG88L3RleHQ+PHRleHQgeD0iMjk3IiB5PSIyMDgiIGZpbGw9IiNmMmY3ZmYiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIzOCIgZm9udC13ZWlnaHQ9IjcwMCI+OTYuMTg5PC90ZXh0Pgo8dGV4dCB4PSI1MzQiIHk9IjE2MCIgZmlsbD0iIzhmYjFkYiIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIyIj5BdGVuZGlkYXM8L3RleHQ+PHRleHQgeD0iNTM0IiB5PSIyMDgiIGZpbGw9IiNmMmY3ZmYiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIzOCIgZm9udC13ZWlnaHQ9IjcwMCI+My4zMTk8L3RleHQ+Cjx0ZXh0IHg9Ijc3MSIgeT0iMTYwIiBmaWxsPSIjOGZiMWRiIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjIiPkNQQzwvdGV4dD48dGV4dCB4PSI3NzEiIHk9IjIwOCIgZmlsbD0iI2YyZjdmZiIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjM4IiBmb250LXdlaWdodD0iNzAwIj4xLjI3ODwvdGV4dD4KPHRleHQgeD0iMTAwNiIgeT0iMTYwIiBmaWxsPSIjOGZiMWRiIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjIiPkNvbnZlcnPDo288L3RleHQ+PHRleHQgeD0iMTAwNiIgeT0iMjA4IiBmaWxsPSIjZjJmN2ZmIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMzgiIGZvbnQtd2VpZ2h0PSI3MDAiPjIxLDIlPC90ZXh0Pgo8cmVjdCB4PSIzNiIgeT0iMjcwIiB3aWR0aD0iNzAwIiBoZWlnaHQ9IjIyMCIgcng9IjI4IiBmaWxsPSIjMTAyMTQxIiBzdHJva2U9IiMyMTQ2NzIiLz4KPHRleHQgeD0iNjAiIHk9IjMxMCIgZmlsbD0iI2YyZjdmZiIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iNzAwIj5Qcm9kdcOnw6NvIGhvcmEgeCBob3JhPC90ZXh0Pgo8cG9seWxpbmUgcG9pbnRzPSI4MCw0MzAgMTUwLDM5NSAyMjAsMzYwIDI5MCwzNjUgMzYwLDMzMCA0MzAsMzE0IDUwMCwyOTIgNTcwLDMwNSA2NDAsMjc1IDcwMCwyNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNhY2MpIiBzdHJva2Utd2lkdGg9IjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8cG9seWxpbmUgcG9pbnRzPSI4MCw0NTAgMTUwLDQzMiAyMjAsNDI0IDI5MCw0MTAgMzYwLDQwNSA0MzAsNDAwIDUwMCwzODQgNTcwLDM3NiA2NDAsMzY2IDcwMCwzNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNhY2MyKSIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIG9wYWNpdHk9IjAuOSIvPgo8ZyBmaWxsPSIjMjRhOGZmIj4gPGNpcmNsZSBjeD0iODAiIGN5PSI0MzAiIHI9IjYiLz48Y2lyY2xlIGN4PSIxNTAiIGN5PSIzOTUiIHI9IjYiLz48Y2lyY2xlIGN4PSIyMjAiIGN5PSIzNjAiIHI9IjYiLz48Y2lyY2xlIGN4PSIyOTAiIGN5PSIzNjUiIHI9IjYiLz48Y2lyY2xlIGN4PSIzNjAiIGN5PSIzMzAiIHI9IjYiLz48Y2lyY2xlIGN4PSI0MzAiIGN5PSIzMTQiIHI9IjYiLz48Y2lyY2xlIGN4PSI1MDAiIGN5PSIyOTIiIHI9IjYiLz48Y2lyY2xlIGN4PSI1NzAiIGN5PSIzMDUiIHI9IjYiLz48Y2lyY2xlIGN4PSI2NDAiIGN5PSIyNzUiIHI9IjYiLz48Y2lyY2xlIGN4PSI3MDAiIGN5PSIyNTAiIHI9IjYiLz48L2c+CjxnIGZpbGw9IiM5M2FiYzkiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNiI+PHRleHQgeD0iNzAiIHk9IjQ2NSI+MDhoPC90ZXh0Pjx0ZXh0IHg9IjE0MCIgeT0iNDY1Ij4wOWg8L3RleHQ+PHRleHQgeD0iMjEwIiB5PSI0NjUiPjEwaDwvdGV4dD48dGV4dCB4PSIyODAiIHk9IjQ2NSI+MTFoPC90ZXh0Pjx0ZXh0IHg9IjM1MCIgeT0iNDY1Ij4xMmg8L3RleHQ+PHRleHQgeD0iNDIwIiB5PSI0NjUiPjEzaDwvdGV4dD48dGV4dCB4PSI0OTAiIHk9IjQ2NSI+MTRoPC90ZXh0Pjx0ZXh0IHg9IjU2MCIgeT0iNDY1Ij4xNWg8L3RleHQ+PHRleHQgeD0iNjMwIiB5PSI0NjUiPjE2aDwvdGV4dD48dGV4dCB4PSI2OTAiIHk9IjQ2NSI+MTdoPC90ZXh0PjwvZz4KPHJlY3QgeD0iNzYwIiB5PSIyNzAiIHdpZHRoPSI0MDQiIGhlaWdodD0iMjIwIiByeD0iMjgiIGZpbGw9IiMxMDIxNDEiIHN0cm9rZT0iIzIxNDY3MiIvPgo8dGV4dCB4PSI3ODQiIHk9IjMxMCIgZmlsbD0iI2YyZjdmZiIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iNzAwIj5GdW5pbDwvdGV4dD4KPHBhdGggZD0iTTgyNSAzNDBIMTEwMEwxMDQ1IDM4MEg4ODBaIiBmaWxsPSIjMTkzODVlIi8+PHBhdGggZD0iTTg1NSAzOTBIMTA2OEwxMDIyIDQzMEg5MDBaIiBmaWxsPSIjMWY1MDdjIi8+PHBhdGggZD0iTTg4NSA0NDBIMTAzOEw5OTggNDc4SDkyMFoiIGZpbGw9IiMyNGE4ZmYiIG9wYWNpdHk9IjAuOSIvPgo8dGV4dCB4PSI4MjAiIHk9IjM2NiIgZmlsbD0iI2RiZTlmZiIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4Ij5NYWlsaW5nIDM1NWs8L3RleHQ+PHRleHQgeD0iODUwIiB5PSI0MTciIGZpbGw9IiNkYmU5ZmYiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCI+QXRlbmRpZGFzIDMsM2s8L3RleHQ+PHRleHQgeD0iODgyIiB5PSI0NjYiIGZpbGw9IiNmZmZmZmYiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCI+QWNvcmRvcyA3MDM8L3RleHQ+CjxyZWN0IHg9IjM2IiB5PSI1MjAiIHdpZHRoPSIxMTI4IiBoZWlnaHQ9IjIwMCIgcng9IjI4IiBmaWxsPSIjMTAyMTQxIiBzdHJva2U9IiMyMTQ2NzIiLz4KPHRleHQgeD0iNjAiIHk9IjU2MCIgZmlsbD0iI2YyZjdmZiIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iNzAwIj5UYWJ1bGHDp8O1ZXM8L3RleHQ+CjxyZWN0IHg9IjYwIiB5PSI1OTAiIHdpZHRoPSIxMDYwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzBkMTgzMSIvPgo8cmVjdCB4PSI2MCIgeT0iNTkwIiB3aWR0aD0iNzAwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0idXJsKCNhY2MpIi8+CjxyZWN0IHg9IjYwIiB5PSI2MjUiIHdpZHRoPSIxMDYwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzBkMTgzMSIvPgo8cmVjdCB4PSI2MCIgeT0iNjI1IiB3aWR0aD0iNTUwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzMxZDBhYSIvPgo8cmVjdCB4PSI2MCIgeT0iNjYwIiB3aWR0aD0iMTA2MCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiMwZDE4MzEiLz4KPHJlY3QgeD0iNjAiIHk9IjY2MCIgd2lkdGg9IjQzMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9InVybCgjYWNjMikiLz4KPGcgZmlsbD0iI2RiZTlmZiIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4Ij48dGV4dCB4PSI2MCIgeT0iNTg0Ij5CdXN5PC90ZXh0Pjx0ZXh0IHg9IjYwIiB5PSI2MTkiPk5vIEFuc3dlcjwvdGV4dD48dGV4dCB4PSI2MCIgeT0iNjU0Ij5Db250YXRvPC90ZXh0Pjx0ZXh0IHg9IjEwODAiIHk9IjYwNCI+NjYlPC90ZXh0Pjx0ZXh0IHg9IjEwODAiIHk9IjYzOSI+NTIlPC90ZXh0Pjx0ZXh0IHg9IjEwODAiIHk9IjY3NCI+NDElPC90ZXh0PjwvZz4KPC9zdmc+" alt="Preview de dashboard executivo"></div>
         </div>
       </div>
     </section>
@@ -85,14 +90,14 @@
     <section id="servicos">
       <div class="container">
         <div class="section-head">
-          <h2>Soluções que deixam sua empresa mais bem apresentada.</h2>
-          <p>Você pode usar a Nexa para apresentar serviços, portfólio, projetos, resultados, indicadores ou até criar uma landing page comercial com cara mais robusta.</p>
+          <h2>Soluções para fortalecer a presença da sua empresa no digital.</h2>
+          <p>Da apresentação institucional ao painel executivo, cada solução é pensada para gerar percepção de valor, clareza na comunicação e mais confiança para quem entra em contato com a sua marca.</p>
         </div>
         <div class="service-grid">
-          <article class="card"><div class="icon">🌐</div><h3>Site institucional</h3><p>Estrutura profissional para apresentar sua empresa, soluções, diferenciais e canais de contato.</p></article>
-          <article class="card"><div class="icon">📊</div><h3>Dashboard executivo</h3><p>KPIs, comparativos, hora a hora, tabulações e painéis analíticos com visual mais elegante.</p></article>
-          <article class="card"><div class="icon">🧠</div><h3>Consultoria estratégica</h3><p>Posicionamento, narrativa comercial, visão de resultados e organização macro de iniciativas.</p></article>
-          <article class="card"><div class="icon">⚙️</div><h3>Soluções web sob medida</h3><p>Painéis de gestão, esteiras de demanda, páginas internas e experiências customizadas.</p></article>
+          <article class="card"><div class="icon">🌐</div><h3>Site institucional</h3><p>Apresente sua empresa com uma estrutura elegante, profissional e pronta para transmitir credibilidade.</p></article>
+          <article class="card"><div class="icon">📊</div><h3>Dashboard executivo</h3><p>Transforme números em uma leitura visual forte para apoiar decisões e valorizar seus resultados.</p></article>
+          <article class="card"><div class="icon">🧠</div><h3>Estratégia comercial</h3><p>Organize sua proposta de valor e apresente seus diferenciais de forma mais clara, objetiva e convincente.</p></article>
+          <article class="card"><div class="icon">⚙️</div><h3>Soluções sob medida</h3><p>Projetos personalizados para atender necessidades específicas com mais organização, eficiência e impacto.</p></article>
         </div>
       </div>
     </section>
@@ -100,26 +105,26 @@
     <section id="projetos">
       <div class="container">
         <div class="section-head">
-          <h2>Dashboards agora visíveis dentro dos cards</h2>
-          <p>Em vez de blocos genéricos, esta V2 já traz exemplos visuais para o visitante sentir o nível do projeto logo de cara.</p>
+          <h2>Projetos que traduzem informação em valor.</h2>
+          <p>Exemplos visuais que mostram como dados, indicadores e informação podem ganhar uma apresentação muito mais estratégica e comercial.</p>
         </div>
         <div class="project-grid">
           <article class="project-card">
-            <div class="project-thumb"><img src="assets/dashboard_preview_01.svg" alt="Cockpit executivo"></div>
+            <div class="project-thumb"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9Ijc2MCIgdmlld0JveD0iMCAwIDEyMDAgNzYwIj4KPGRlZnM+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzBiMTgzMyIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzA5MTExZiIvPjwvbGluZWFyR3JhZGllbnQ+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJhY2MiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIwIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyNGE4ZmYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM0NWU3ZmYiLz48L2xpbmVhckdyYWRpZW50PgogIDxsaW5lYXJHcmFkaWVudCBpZD0iYWNjMiIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjAiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2ZmOGExZiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZmYmY2OCIvPjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNzYwIiByeD0iMjgiIGZpbGw9InVybCgjYmcpIi8+CjxyZWN0IHg9IjI0IiB5PSIyNCIgd2lkdGg9IjExNTIiIGhlaWdodD0iNzAiIHJ4PSIxOCIgZmlsbD0iIzBmMjI0NCIgc3Ryb2tlPSIjMjE0NjcyIi8+CjxjaXJjbGUgY3g9IjYyIiBjeT0iNTgiIHI9IjgiIGZpbGw9IiNmZjY1NjUiLz48Y2lyY2xlIGN4PSI4OCIgY3k9IjU4IiByPSI4IiBmaWxsPSIjZmZjODU3Ii8+PGNpcmNsZSBjeD0iMTE0IiBjeT0iNTgiIHI9IjgiIGZpbGw9IiM0YWQyOTUiLz4KPHJlY3QgeD0iMTYwIiB5PSI0NCIgd2lkdGg9IjIzMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjMTYyYzUyIi8+CjxyZWN0IHg9Ijk0NSIgeT0iNDIiIHdpZHRoPSIxOTUiIGhlaWdodD0iMzAiIHJ4PSIxNSIgZmlsbD0iIzE0Mjk0NiIgc3Ryb2tlPSIjMzA1NTgyIi8+CjxyZWN0IHg9IjM2IiB5PSIxMjAiIHdpZHRoPSIyMTUiIGhlaWdodD0iMTIwIiByeD0iMjQiIGZpbGw9IiMxMDIxNDEiIHN0cm9rZT0iIzIxNDY3MiIvPgo8cmVjdCB4PSIyNzMiIHk9IjEyMCIgd2lkdGg9IjIxNSIgaGVpZ2h0PSIxMjAiIHJ4PSIyNCIgZmlsbD0iIzEwMjE0MSIgc3Ryb2tlPSIjMjE0NjcyIi8+CjxyZWN0IHg9IjUxMCIgeT0iMTIwIiB3aWR0aD0iMjE1IiBoZWlnaHQ9IjEyMCIgcng9IjI0IiBmaWxsPSIjMTAyMTQxIiBzdHJva2U9IiMyMTQ2NzIiLz4KPHJlY3QgeD0iNzQ3IiB5PSIxMjAiIHdpZHRoPSIyMTUiIGhlaWdodD0iMTIwIiByeD0iMjQiIGZpbGw9IiMxMDIxNDEiIHN0cm9rZT0iIzIxNDY3MiIvPgo8cmVjdCB4PSI5ODQiIHk9IjEyMCIgd2lkdGg9IjE4MCIgaGVpZ2h0PSIxMjAiIHJ4PSIyNCIgZmlsbD0iIzEwMjE0MSIgc3Ryb2tlPSIjMjE0NjcyIi8+Cjx0ZXh0IHg9IjYwIiB5PSIxNjAiIGZpbGw9IiM4ZmIxZGIiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyMiI+TWFpbGluZzwvdGV4dD48dGV4dCB4PSI2MCIgeT0iMjA4IiBmaWxsPSIjZjJmN2ZmIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMzgiIGZvbnQtd2VpZ2h0PSI3MDAiPjM1NS41NDA8L3RleHQ+Cjx0ZXh0IHg9IjI5NyIgeT0iMTYwIiBmaWxsPSIjOGZiMWRiIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjIiPkRpc2NhZG88L3RleHQ+PHRleHQgeD0iMjk3IiB5PSIyMDgiIGZpbGw9IiNmMmY3ZmYiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIzOCIgZm9udC13ZWlnaHQ9IjcwMCI+OTYuMTg5PC90ZXh0Pgo8dGV4dCB4PSI1MzQiIHk9IjE2MCIgZmlsbD0iIzhmYjFkYiIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIyIj5BdGVuZGlkYXM8L3RleHQ+PHRleHQgeD0iNTM0IiB5PSIyMDgiIGZpbGw9IiNmMmY3ZmYiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIzOCIgZm9udC13ZWlnaHQ9IjcwMCI+My4zMTk8L3RleHQ+Cjx0ZXh0IHg9Ijc3MSIgeT0iMTYwIiBmaWxsPSIjOGZiMWRiIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjIiPkNQQzwvdGV4dD48dGV4dCB4PSI3NzEiIHk9IjIwOCIgZmlsbD0iI2YyZjdmZiIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjM4IiBmb250LXdlaWdodD0iNzAwIj4xLjI3ODwvdGV4dD4KPHRleHQgeD0iMTAwNiIgeT0iMTYwIiBmaWxsPSIjOGZiMWRiIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjIiPkNvbnZlcnPDo288L3RleHQ+PHRleHQgeD0iMTAwNiIgeT0iMjA4IiBmaWxsPSIjZjJmN2ZmIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMzgiIGZvbnQtd2VpZ2h0PSI3MDAiPjIxLDIlPC90ZXh0Pgo8cmVjdCB4PSIzNiIgeT0iMjcwIiB3aWR0aD0iNzAwIiBoZWlnaHQ9IjIyMCIgcng9IjI4IiBmaWxsPSIjMTAyMTQxIiBzdHJva2U9IiMyMTQ2NzIiLz4KPHRleHQgeD0iNjAiIHk9IjMxMCIgZmlsbD0iI2YyZjdmZiIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iNzAwIj5Qcm9kdcOnw6NvIGhvcmEgeCBob3JhPC90ZXh0Pgo8cG9seWxpbmUgcG9pbnRzPSI4MCw0MzAgMTUwLDM5NSAyMjAsMzYwIDI5MCwzNjUgMzYwLDMzMCA0MzAsMzE0IDUwMCwyOTIgNTcwLDMwNSA2NDAsMjc1IDcwMCwyNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNhY2MpIiBzdHJva2Utd2lkdGg9IjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8cG9seWxpbmUgcG9pbnRzPSI4MCw0NTAgMTUwLDQzMiAyMjAsNDI0IDI5MCw0MTAgMzYwLDQwNSA0MzAsNDAwIDUwMCwzODQgNTcwLDM3NiA2NDAsMzY2IDcwMCwzNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNhY2MyKSIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIG9wYWNpdHk9IjAuOSIvPgo8ZyBmaWxsPSIjMjRhOGZmIj4gPGNpcmNsZSBjeD0iODAiIGN5PSI0MzAiIHI9IjYiLz48Y2lyY2xlIGN4PSIxNTAiIGN5PSIzOTUiIHI9IjYiLz48Y2lyY2xlIGN4PSIyMjAiIGN5PSIzNjAiIHI9IjYiLz48Y2lyY2xlIGN4PSIyOTAiIGN5PSIzNjUiIHI9IjYiLz48Y2lyY2xlIGN4PSIzNjAiIGN5PSIzMzAiIHI9IjYiLz48Y2lyY2xlIGN4PSI0MzAiIGN5PSIzMTQiIHI9IjYiLz48Y2lyY2xlIGN4PSI1MDAiIGN5PSIyOTIiIHI9IjYiLz48Y2lyY2xlIGN4PSI1NzAiIGN5PSIzMDUiIHI9IjYiLz48Y2lyY2xlIGN4PSI2NDAiIGN5PSIyNzUiIHI9IjYiLz48Y2lyY2xlIGN4PSI3MDAiIGN5PSIyNTAiIHI9IjYiLz48L2c+CjxnIGZpbGw9IiM5M2FiYzkiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNiI+PHRleHQgeD0iNzAiIHk9IjQ2NSI+MDhoPC90ZXh0Pjx0ZXh0IHg9IjE0MCIgeT0iNDY1Ij4wOWg8L3RleHQ+PHRleHQgeD0iMjEwIiB5PSI0NjUiPjEwaDwvdGV4dD48dGV4dCB4PSIyODAiIHk9IjQ2NSI+MTFoPC90ZXh0Pjx0ZXh0IHg9IjM1MCIgeT0iNDY1Ij4xMmg8L3RleHQ+PHRleHQgeD0iNDIwIiB5PSI0NjUiPjEzaDwvdGV4dD48dGV4dCB4PSI0OTAiIHk9IjQ2NSI+MTRoPC90ZXh0Pjx0ZXh0IHg9IjU2MCIgeT0iNDY1Ij4xNWg8L3RleHQ+PHRleHQgeD0iNjMwIiB5PSI0NjUiPjE2aDwvdGV4dD48dGV4dCB4PSI2OTAiIHk9IjQ2NSI+MTdoPC90ZXh0PjwvZz4KPHJlY3QgeD0iNzYwIiB5PSIyNzAiIHdpZHRoPSI0MDQiIGhlaWdodD0iMjIwIiByeD0iMjgiIGZpbGw9IiMxMDIxNDEiIHN0cm9rZT0iIzIxNDY3MiIvPgo8dGV4dCB4PSI3ODQiIHk9IjMxMCIgZmlsbD0iI2YyZjdmZiIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iNzAwIj5GdW5pbDwvdGV4dD4KPHBhdGggZD0iTTgyNSAzNDBIMTEwMEwxMDQ1IDM4MEg4ODBaIiBmaWxsPSIjMTkzODVlIi8+PHBhdGggZD0iTTg1NSAzOTBIMTA2OEwxMDIyIDQzMEg5MDBaIiBmaWxsPSIjMWY1MDdjIi8+PHBhdGggZD0iTTg4NSA0NDBIMTAzOEw5OTggNDc4SDkyMFoiIGZpbGw9IiMyNGE4ZmYiIG9wYWNpdHk9IjAuOSIvPgo8dGV4dCB4PSI4MjAiIHk9IjM2NiIgZmlsbD0iI2RiZTlmZiIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4Ij5NYWlsaW5nIDM1NWs8L3RleHQ+PHRleHQgeD0iODUwIiB5PSI0MTciIGZpbGw9IiNkYmU5ZmYiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCI+QXRlbmRpZGFzIDMsM2s8L3RleHQ+PHRleHQgeD0iODgyIiB5PSI0NjYiIGZpbGw9IiNmZmZmZmYiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCI+QWNvcmRvcyA3MDM8L3RleHQ+CjxyZWN0IHg9IjM2IiB5PSI1MjAiIHdpZHRoPSIxMTI4IiBoZWlnaHQ9IjIwMCIgcng9IjI4IiBmaWxsPSIjMTAyMTQxIiBzdHJva2U9IiMyMTQ2NzIiLz4KPHRleHQgeD0iNjAiIHk9IjU2MCIgZmlsbD0iI2YyZjdmZiIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iNzAwIj5UYWJ1bGHDp8O1ZXM8L3RleHQ+CjxyZWN0IHg9IjYwIiB5PSI1OTAiIHdpZHRoPSIxMDYwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzBkMTgzMSIvPgo8cmVjdCB4PSI2MCIgeT0iNTkwIiB3aWR0aD0iNzAwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0idXJsKCNhY2MpIi8+CjxyZWN0IHg9IjYwIiB5PSI2MjUiIHdpZHRoPSIxMDYwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzBkMTgzMSIvPgo8cmVjdCB4PSI2MCIgeT0iNjI1IiB3aWR0aD0iNTUwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzMxZDBhYSIvPgo8cmVjdCB4PSI2MCIgeT0iNjYwIiB3aWR0aD0iMTA2MCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiMwZDE4MzEiLz4KPHJlY3QgeD0iNjAiIHk9IjY2MCIgd2lkdGg9IjQzMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9InVybCgjYWNjMikiLz4KPGcgZmlsbD0iI2RiZTlmZiIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4Ij48dGV4dCB4PSI2MCIgeT0iNTg0Ij5CdXN5PC90ZXh0Pjx0ZXh0IHg9IjYwIiB5PSI2MTkiPk5vIEFuc3dlcjwvdGV4dD48dGV4dCB4PSI2MCIgeT0iNjU0Ij5Db250YXRvPC90ZXh0Pjx0ZXh0IHg9IjEwODAiIHk9IjYwNCI+NjYlPC90ZXh0Pjx0ZXh0IHg9IjEwODAiIHk9IjYzOSI+NTIlPC90ZXh0Pjx0ZXh0IHg9IjEwODAiIHk9IjY3NCI+NDElPC90ZXh0PjwvZz4KPC9zdmc+" alt="Cockpit executivo"></div>
             <h3>Cockpit Operacional</h3>
-            <p>Visão consolidada com KPIs, produção hora a hora, funil e tabulações para acompanhamento de performance.</p>
+            <p>Visão executiva para acompanhar performance, indicadores e operação com leitura rápida e segura.</p>
             <div class="project-tags"><span>Operação</span><span>Indicadores</span><span>Tempo real</span></div>
           </article>
           <article class="project-card">
-            <div class="project-thumb"><img src="assets/dashboard_preview_02.svg" alt="Painel de gestão de projetos"></div>
+            <div class="project-thumb"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9Ijc2MCIgdmlld0JveD0iMCAwIDEyMDAgNzYwIj4KPGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzExMTgyNyIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzBhMTAxYiIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJnciIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzIyYzU1ZSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzE0YjhhNiIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJvciIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjAiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2ZiOTIzYyIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2Y1OWUwYiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI3NjAiIHJ4PSIyOCIgZmlsbD0idXJsKCNiZykiLz4KPHJlY3QgeD0iMjYiIHk9IjI2IiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjcwOCIgcng9IjI0IiBmaWxsPSIjMTAxOTJhIiBzdHJva2U9IiMyNjMxNDUiLz4KPHJlY3QgeD0iMjMyIiB5PSIyNiIgd2lkdGg9Ijk0MiIgaGVpZ2h0PSI4NCIgcng9IjI0IiBmaWxsPSIjMTAxOTJhIiBzdHJva2U9IiMyNjMxNDUiLz4KPHRleHQgeD0iNTgiIHk9Ijc4IiBmaWxsPSIjZjhmYWZjIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMzAiIGZvbnQtd2VpZ2h0PSI3MDAiPlByb2plY3QgSHViPC90ZXh0Pgo8ZyBmaWxsPSIjN2Y4ZWE2IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiPjx0ZXh0IHg9IjU4IiB5PSIxNjAiPlZpc8OjbyBHZXJhbDwvdGV4dD48dGV4dCB4PSI1OCIgeT0iMjA1Ij5EZW1hbmRhczwvdGV4dD48dGV4dCB4PSI1OCIgeT0iMjUwIj5Sb2FkbWFwPC90ZXh0Pjx0ZXh0IHg9IjU4IiB5PSIyOTUiPkVxdWlwZTwvdGV4dD48dGV4dCB4PSI1OCIgeT0iMzQwIj5SaXNjb3M8L3RleHQ+PC9nPgo8cmVjdCB4PSIyNTQiIHk9IjEzOCIgd2lkdGg9IjIxNCIgaGVpZ2h0PSIxMjAiIHJ4PSIyNCIgZmlsbD0iIzEwMTkyYSIgc3Ryb2tlPSIjMjYzMTQ1Ii8+PHJlY3QgeD0iNDg2IiB5PSIxMzgiIHdpZHRoPSIyMTQiIGhlaWdodD0iMTIwIiByeD0iMjQiIGZpbGw9IiMxMDE5MmEiIHN0cm9rZT0iIzI2MzE0NSIvPjxyZWN0IHg9IjcxOCIgeT0iMTM4IiB3aWR0aD0iMjE0IiBoZWlnaHQ9IjEyMCIgcng9IjI0IiBmaWxsPSIjMTAxOTJhIiBzdHJva2U9IiMyNjMxNDUiLz48cmVjdCB4PSI5NTAiIHk9IjEzOCIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIxMjAiIHJ4PSIyNCIgZmlsbD0iIzEwMTkyYSIgc3Ryb2tlPSIjMjYzMTQ1Ii8+Cjx0ZXh0IHg9IjI3OCIgeT0iMTc2IiBmaWxsPSIjOGFhMGJkIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjAiPlByb2pldG9zPC90ZXh0Pjx0ZXh0IHg9IjI3OCIgeT0iMjI0IiBmaWxsPSIjZjhmYWZjIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNDAiIGZvbnQtd2VpZ2h0PSI3MDAiPjE0PC90ZXh0Pgo8dGV4dCB4PSI1MTAiIHk9IjE3NiIgZmlsbD0iIzhhYTBiZCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIj5FbSBhbmRhbWVudG88L3RleHQ+PHRleHQgeD0iNTEwIiB5PSIyMjQiIGZpbGw9IiNmOGZhZmMiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI0MCIgZm9udC13ZWlnaHQ9IjcwMCI+MDc8L3RleHQ+Cjx0ZXh0IHg9Ijc0MiIgeT0iMTc2IiBmaWxsPSIjOGFhMGJkIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjAiPk5vIHByYXpvPC90ZXh0Pjx0ZXh0IHg9Ijc0MiIgeT0iMjI0IiBmaWxsPSIjZjhmYWZjIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNDAiIGZvbnQtd2VpZ2h0PSI3MDAiPjkyJTwvdGV4dD4KPHRleHQgeD0iOTc0IiB5PSIxNzYiIGZpbGw9IiM4YWEwYmQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyMCI+QmFja2xvZzwvdGV4dD48dGV4dCB4PSI5NzQiIHk9IjIyNCIgZmlsbD0iI2Y4ZmFmYyIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjQwIiBmb250LXdlaWdodD0iNzAwIj4yNjwvdGV4dD4KPHJlY3QgeD0iMjU0IiB5PSIyODYiIHdpZHRoPSI1NDYiIGhlaWdodD0iNDI0IiByeD0iMjgiIGZpbGw9IiMxMDE5MmEiIHN0cm9rZT0iIzI2MzE0NSIvPgo8dGV4dCB4PSIyNzgiIHk9IjMzMCIgZmlsbD0iI2Y4ZmFmYyIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iNzAwIj5Dcm9ub2dyYW1hIE1hY3JvPC90ZXh0Pgo8ZyBmaWxsPSIjMWQyOTNkIj48cmVjdCB4PSIyNzgiIHk9IjM3MCIgd2lkdGg9IjQ5OCIgaGVpZ2h0PSI0NCIgcng9IjEyIi8+PHJlY3QgeD0iMjc4IiB5PSI0MzIiIHdpZHRoPSI0OTgiIGhlaWdodD0iNDQiIHJ4PSIxMiIvPjxyZWN0IHg9IjI3OCIgeT0iNDk0IiB3aWR0aD0iNDk4IiBoZWlnaHQ9IjQ0IiByeD0iMTIiLz48cmVjdCB4PSIyNzgiIHk9IjU1NiIgd2lkdGg9IjQ5OCIgaGVpZ2h0PSI0NCIgcng9IjEyIi8+PHJlY3QgeD0iMjc4IiB5PSI2MTgiIHdpZHRoPSI0OTgiIGhlaWdodD0iNDQiIHJ4PSIxMiIvPjwvZz4KPGcgZmlsbD0iIzhhYTBiZCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4Ij48dGV4dCB4PSIyODgiIHk9IjM5OCI+RGlzY292ZXJ5PC90ZXh0Pjx0ZXh0IHg9IjI4OCIgeT0iNDYwIj5VSSAvIFVYPC90ZXh0Pjx0ZXh0IHg9IjI4OCIgeT0iNTIyIj5EZXYgRnJvbnQ8L3RleHQ+PHRleHQgeD0iMjg4IiB5PSI1ODQiPkRhZG9zPC90ZXh0Pjx0ZXh0IHg9IjI4OCIgeT0iNjQ2Ij5HbyBMaXZlPC90ZXh0PjwvZz4KPGc+PHJlY3QgeD0iNDIwIiB5PSIzNzgiIHdpZHRoPSIyMjAiIGhlaWdodD0iMjgiIHJ4PSIxNCIgZmlsbD0idXJsKCNncikiLz48cmVjdCB4PSI0NzAiIHk9IjQ0MCIgd2lkdGg9IjE4MCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSJ1cmwoI29yKSIvPjxyZWN0IHg9IjQzOCIgeT0iNTAyIiB3aWR0aD0iMjYwIiBoZWlnaHQ9IjI4IiByeD0iMTQiIGZpbGw9IiMyNGE4ZmYiLz48cmVjdCB4PSI1MzAiIHk9IjU2NCIgd2lkdGg9IjE2OCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjOGI1Y2Y2Ii8+PHJlY3QgeD0iNjEwIiB5PSI2MjYiIHdpZHRoPSIxMjAiIGhlaWdodD0iMjgiIHJ4PSIxNCIgZmlsbD0iIzMxZDBhYSIvPjwvZz4KPHJlY3QgeD0iODI2IiB5PSIyODYiIHdpZHRoPSIzMjQiIGhlaWdodD0iMjA0IiByeD0iMjgiIGZpbGw9IiMxMDE5MmEiIHN0cm9rZT0iIzI2MzE0NSIvPgo8dGV4dCB4PSI4NTAiIHk9IjMzMCIgZmlsbD0iI2Y4ZmFmYyIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iNzAwIj5TdGF0dXM8L3RleHQ+CjxjaXJjbGUgY3g9IjkxNCIgY3k9IjQwNCIgcj0iNzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzIxMzE0YiIgc3Ryb2tlLXdpZHRoPSIyOCIvPjxwYXRoIGQ9Ik05MTQgMzM0IEE3MCA3MCAwIDEgMSA4NTcgNDQ4IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZ3IpIiBzdHJva2Utd2lkdGg9IjI4IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPHRleHQgeD0iODg1IiB5PSI0MTQiIGZpbGw9IiNmZmZmZmYiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIzNiIgZm9udC13ZWlnaHQ9IjcwMCI+NzIlPC90ZXh0Pgo8cmVjdCB4PSI4MjYiIHk9IjUwOCIgd2lkdGg9IjMyNCIgaGVpZ2h0PSIyMDIiIHJ4PSIyOCIgZmlsbD0iIzEwMTkyYSIgc3Ryb2tlPSIjMjYzMTQ1Ii8+Cjx0ZXh0IHg9Ijg1MCIgeT0iNTUyIiBmaWxsPSIjZjhmYWZjIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtd2VpZ2h0PSI3MDAiPlBlbmTDqm5jaWFzPC90ZXh0Pgo8cmVjdCB4PSI4NTIiIHk9IjU4MiIgd2lkdGg9IjI3MiIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiMxZDI5M2QiLz48cmVjdCB4PSI4NTIiIHk9IjU4MiIgd2lkdGg9IjE4MCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiNmYjkyM2MiLz4KPHJlY3QgeD0iODUyIiB5PSI2MjAiIHdpZHRoPSIyNzIiIGhlaWdodD0iMTgiIHJ4PSI5IiBmaWxsPSIjMWQyOTNkIi8+PHJlY3QgeD0iODUyIiB5PSI2MjAiIHdpZHRoPSIxMjAiIGhlaWdodD0iMTgiIHJ4PSI5IiBmaWxsPSIjMjJjNTVlIi8+CjxyZWN0IHg9Ijg1MiIgeT0iNjU4IiB3aWR0aD0iMjcyIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzFkMjkzZCIvPjxyZWN0IHg9Ijg1MiIgeT0iNjU4IiB3aWR0aD0iMjIwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzI0YThmZiIvPgo8ZyBmaWxsPSIjZDhlMmYyIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTciPjx0ZXh0IHg9Ijg1MiIgeT0iNTc2Ij5BcHJvdmHDp8OjbyBjbGllbnRlPC90ZXh0Pjx0ZXh0IHg9Ijg1MiIgeT0iNjE0Ij5Db250ZcO6ZG88L3RleHQ+PHRleHQgeD0iODUyIiB5PSI2NTIiPkludGVncmHDp8O1ZXM8L3RleHQ+PC9nPgo8L3N2Zz4=" alt="Painel de gestão de projetos"></div>
             <h3>Painel de Gestão de Projetos</h3>
-            <p>Dashboard com backlog, status, cronograma macro, riscos e governança de entregas.</p>
+            <p>Organize prioridades, acompanhe entregas e tenha uma visão mais clara das iniciativas do seu negócio.</p>
             <div class="project-tags"><span>Projetos</span><span>Roadmap</span><span>Governança</span></div>
           </article>
           <article class="project-card">
-            <div class="project-thumb"><img src="assets/dashboard_preview_03.svg" alt="Dashboard de analytics"></div>
+            <div class="project-thumb"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9Ijc2MCIgdmlld0JveD0iMCAwIDEyMDAgNzYwIj4KPGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzA2MTQyMyIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzBiMTAxOCIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJ5bCIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjAiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2ZkZTA0NyIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2Y1OWUwYiIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJjeSIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjAiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzIyZDNlZSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzM4YmRmOCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI3NjAiIHJ4PSIyOCIgZmlsbD0idXJsKCNiZykiLz4KPHJlY3QgeD0iMjgiIHk9IjI4IiB3aWR0aD0iMTE0NCIgaGVpZ2h0PSI5MiIgcng9IjI2IiBmaWxsPSIjMGYyMTM3IiBzdHJva2U9IiMxZjQxNjgiLz4KPHRleHQgeD0iNTgiIHk9IjgzIiBmaWxsPSIjZjhmYWZjIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMzIiIGZvbnQtd2VpZ2h0PSI3MDAiPlJldmVudWUgQW5hbHl0aWNzPC90ZXh0Pgo8cmVjdCB4PSIyOCIgeT0iMTQ2IiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjI2MCIgcng9IjI4IiBmaWxsPSIjMGYyMTM3IiBzdHJva2U9IiMxZjQxNjgiLz4KPHJlY3QgeD0iNDE0IiB5PSIxNDYiIHdpZHRoPSIzNzIiIGhlaWdodD0iMjYwIiByeD0iMjgiIGZpbGw9IiMwZjIxMzciIHN0cm9rZT0iIzFmNDE2OCIvPgo8cmVjdCB4PSI4MTIiIHk9IjE0NiIgd2lkdGg9IjM2MCIgaGVpZ2h0PSIyNjAiIHJ4PSIyOCIgZmlsbD0iIzBmMjEzNyIgc3Ryb2tlPSIjMWY0MTY4Ii8+Cjx0ZXh0IHg9IjU0IiB5PSIxODgiIGZpbGw9IiNmZmZmZmYiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyOCIgZm9udC13ZWlnaHQ9IjcwMCI+UmVjZWl0YSBwb3IgY2FuYWw8L3RleHQ+CjxnIGZpbGw9IiM4OWEzYzIiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCI+PHRleHQgeD0iNjYiIHk9IjIzMiI+T3JnYW5pYzwvdGV4dD48dGV4dCB4PSI2NiIgeT0iMjc0Ij5QYWlkPC90ZXh0Pjx0ZXh0IHg9IjY2IiB5PSIzMTYiPkNSTTwvdGV4dD48dGV4dCB4PSI2NiIgeT0iMzU4Ij5QYXJ0bmVyczwvdGV4dD48L2c+CjxyZWN0IHg9IjE3MCIgeT0iMjE2IiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzEyMjYzZSIvPjxyZWN0IHg9IjE3MCIgeT0iMjE2IiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0idXJsKCNjeSkiLz4KPHJlY3QgeD0iMTcwIiB5PSIyNTgiIHdpZHRoPSIxODAiIGhlaWdodD0iMTgiIHJ4PSI5IiBmaWxsPSIjMTIyNjNlIi8+PHJlY3QgeD0iMTcwIiB5PSIyNTgiIHdpZHRoPSIxNTAiIGhlaWdodD0iMTgiIHJ4PSI5IiBmaWxsPSJ1cmwoI3lsKSIvPgo8cmVjdCB4PSIxNzAiIHk9IjMwMCIgd2lkdGg9IjE4MCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiMxMjI2M2UiLz48cmVjdCB4PSIxNzAiIHk9IjMwMCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiMzMWQwYWEiLz4KPHJlY3QgeD0iMTcwIiB5PSIzNDIiIHdpZHRoPSIxODAiIGhlaWdodD0iMTgiIHJ4PSI5IiBmaWxsPSIjMTIyNjNlIi8+PHJlY3QgeD0iMTcwIiB5PSIzNDIiIHdpZHRoPSIxMzgiIGhlaWdodD0iMTgiIHJ4PSI5IiBmaWxsPSIjOGI1Y2Y2Ii8+Cjx0ZXh0IHg9IjQzOCIgeT0iMTg4IiBmaWxsPSIjZmZmZmZmIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtd2VpZ2h0PSI3MDAiPkNyZXNjaW1lbnRvPC90ZXh0Pgo8cG9seWxpbmUgcG9pbnRzPSI0NDgsMzQwIDUwMCwzMjIgNTUyLDI5MCA2MDQsMzAyIDY1NiwyNjQgNzA4LDIzMCA3NjAsMjEwIiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjY3kpIiBzdHJva2Utd2lkdGg9IjkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8ZyBmaWxsPSIjMzhiZGY4Ij48Y2lyY2xlIGN4PSI0NDgiIGN5PSIzNDAiIHI9IjYiLz48Y2lyY2xlIGN4PSI1MDAiIGN5PSIzMjIiIHI9IjYiLz48Y2lyY2xlIGN4PSI1NTIiIGN5PSIyOTAiIHI9IjYiLz48Y2lyY2xlIGN4PSI2MDQiIGN5PSIzMDIiIHI9IjYiLz48Y2lyY2xlIGN4PSI2NTYiIGN5PSIyNjQiIHI9IjYiLz48Y2lyY2xlIGN4PSI3MDgiIGN5PSIyMzAiIHI9IjYiLz48Y2lyY2xlIGN4PSI3NjAiIGN5PSIyMTAiIHI9IjYiLz48L2c+Cjx0ZXh0IHg9IjgzNiIgeT0iMTg4IiBmaWxsPSIjZmZmZmZmIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtd2VpZ2h0PSI3MDAiPk1ldGEgeCBSZWFsaXphZG88L3RleHQ+CjxjaXJjbGUgY3g9Ijk5MyIgY3k9IjI4NiIgcj0iODYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzIwMzQ1MiIgc3Ryb2tlLXdpZHRoPSIzMCIvPjxwYXRoIGQ9Ik05OTMgMjAwIEE4NiA4NiAwIDEgMSA5MTkgMzM4IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjeWwpIiBzdHJva2Utd2lkdGg9IjMwIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48dGV4dCB4PSI5NTgiIHk9IjI5OCIgZmlsbD0iI2ZmZmZmZiIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjQwIiBmb250LXdlaWdodD0iNzAwIj44NCU8L3RleHQ+CjxyZWN0IHg9IjI4IiB5PSI0MzIiIHdpZHRoPSIxMTQ0IiBoZWlnaHQ9IjMwMCIgcng9IjI4IiBmaWxsPSIjMGYyMTM3IiBzdHJva2U9IiMxZjQxNjgiLz4KPHRleHQgeD0iNTQiIHk9IjQ3NiIgZmlsbD0iI2ZmZmZmZiIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iNzAwIj5Db21wYXJhdGl2byBtZW5zYWw8L3RleHQ+CjxnIGZpbGw9IiMxNzMwNGUiPjxyZWN0IHg9Ijg0IiB5PSI2NDgiIHdpZHRoPSI2MCIgaGVpZ2h0PSI0MCIgcng9IjEwIi8+PHJlY3QgeD0iMTgwIiB5PSI2MDIiIHdpZHRoPSI2MCIgaGVpZ2h0PSI4NiIgcng9IjEwIi8+PHJlY3QgeD0iMjc2IiB5PSI1NzAiIHdpZHRoPSI2MCIgaGVpZ2h0PSIxMTgiIHJ4PSIxMCIvPjxyZWN0IHg9IjM3MiIgeT0iNTM0IiB3aWR0aD0iNjAiIGhlaWdodD0iMTU0IiByeD0iMTAiLz48cmVjdCB4PSI0NjgiIHk9IjU2MCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjEyOCIgcng9IjEwIi8+PHJlY3QgeD0iNTY0IiB5PSI1MDUiIHdpZHRoPSI2MCIgaGVpZ2h0PSIxODMiIHJ4PSIxMCIvPjxyZWN0IHg9IjY2MCIgeT0iNDc0IiB3aWR0aD0iNjAiIGhlaWdodD0iMjE0IiByeD0iMTAiLz48cmVjdCB4PSI3NTYiIHk9IjUzMCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjE1OCIgcng9IjEwIi8+PHJlY3QgeD0iODUyIiB5PSI0NTgiIHdpZHRoPSI2MCIgaGVpZ2h0PSIyMzAiIHJ4PSIxMCIvPjxyZWN0IHg9Ijk0OCIgeT0iNDk0IiB3aWR0aD0iNjAiIGhlaWdodD0iMTk0IiByeD0iMTAiLz48L2c+CjxnIGZpbGw9InVybCgjY3kpIj48cmVjdCB4PSIxMDIiIHk9IjYyMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjY4IiByeD0iOCIvPjxyZWN0IHg9IjE5OCIgeT0iNTc4IiB3aWR0aD0iMjQiIGhlaWdodD0iMTEwIiByeD0iOCIvPjxyZWN0IHg9IjI5NCIgeT0iNTQ0IiB3aWR0aD0iMjQiIGhlaWdodD0iMTQ0IiByeD0iOCIvPjxyZWN0IHg9IjM5MCIgeT0iNDk4IiB3aWR0aD0iMjQiIGhlaWdodD0iMTkwIiByeD0iOCIvPjxyZWN0IHg9IjQ4NiIgeT0iNTMwIiB3aWR0aD0iMjQiIGhlaWdodD0iMTU4IiByeD0iOCIvPjxyZWN0IHg9IjU4MiIgeT0iNDcwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjE4IiByeD0iOCIvPjxyZWN0IHg9IjY3OCIgeT0iNDMwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjU4IiByeD0iOCIvPjxyZWN0IHg9Ijc3NCIgeT0iNTAwIiB3aWR0aD0iMjQiIGhlaWdodD0iMTg4IiByeD0iOCIvPjxyZWN0IHg9Ijg3MCIgeT0iNDEwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjc4IiByeD0iOCIvPjxyZWN0IHg9Ijk2NiIgeT0iNDUwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjM4IiByeD0iOCIvPjwvZz4KPC9zdmc+" alt="Dashboard de analytics"></div>
             <h3>Revenue Analytics</h3>
-            <p>Painel para metas, crescimento, canais e comparativo mensal com leitura rápida para decisão executiva.</p>
+            <p>Apresente metas, crescimento e evolução de resultados com uma estética mais premium e convincente.</p>
             <div class="project-tags"><span>Analytics</span><span>Receita</span><span>Business</span></div>
           </article>
         </div>
@@ -129,8 +134,8 @@
     <section id="modelos">
       <div class="container">
         <div class="section-head">
-          <h2>Modelos de site para empresa</h2>
-          <p>Retirei os modelos de supermercado e substituí por ideias mais amplas, para você mostrar que atende vários tipos de negócio.</p>
+          <h2>Presença digital para diferentes perfis de negócio.</h2>
+          <p>Modelos pensados para diferentes segmentos, com linguagem visual adequada para transmitir confiança, modernidade e profissionalismo.</p>
         </div>
         <div class="company-grid">
           <article class="card company-preview">
@@ -141,7 +146,7 @@
               <div class="mini-columns"><div class="mini-box"></div><div class="mini-box"></div><div class="mini-box"></div></div>
             </div>
             <h3>Consultoria Corporativa</h3>
-            <p>Modelo com posicionamento premium, destaques de serviços, cases, diferenciais e contato consultivo.</p>
+            <p>Ideal para empresas que precisam comunicar autoridade, posicionamento premium e segurança na tomada de decisão.</p>
             <div class="project-tags"><span>Institucional</span><span>Consultoria</span></div>
           </article>
           <article class="card company-preview">
@@ -152,7 +157,7 @@
               <div class="mini-columns"><div class="mini-box"></div><div class="mini-box"></div><div class="mini-box"></div></div>
             </div>
             <h3>Empresa de Tecnologia</h3>
-            <p>Modelo focado em inovação, soluções, produto, integrações, arquitetura e credibilidade técnica.</p>
+            <p>Perfeito para negócios que querem mostrar inovação, robustez de solução e confiança técnica desde o primeiro acesso.</p>
             <div class="project-tags"><span>Tecnologia</span><span>SaaS</span></div>
           </article>
           <article class="card company-preview">
@@ -163,7 +168,7 @@
               <div class="mini-columns"><div class="mini-box"></div><div class="mini-box"></div><div class="mini-box"></div></div>
             </div>
             <h3>Agência / Studio Digital</h3>
-            <p>Modelo com apelo visual forte para branding, portfólio criativo, projetos e captação comercial.</p>
+            <p>Excelente para marcas que precisam unir impacto visual, apresentação de cases e uma abordagem comercial mais forte.</p>
             <div class="project-tags"><span>Portfólio</span><span>Criação</span></div>
           </article>
         </div>
@@ -173,26 +178,66 @@
     <section id="processo">
       <div class="container">
         <div class="section-head">
-          <h2>Como a Nexa conduz um projeto</h2>
-          <p>Uma jornada simples: entender o negócio, desenhar o visual, construir a solução e evoluir junto com o cliente.</p>
+          <h2>Por que a Nexa faz diferença.</h2>
+          <p>Mais do que presença digital, a proposta é entregar clareza, percepção de valor e uma comunicação que aproxima sua empresa de novas oportunidades.</p>
         </div>
         <div class="process">
-          <article class="card step"><div class="icon">🔎</div><h3>Diagnóstico</h3><p>Mapeamento da dor, público, oferta, conteúdo, dados e objetivo principal do site ou dashboard.</p></article>
-          <article class="card step"><div class="icon">🧩</div><h3>Estrutura</h3><p>Definição de layout, seções, navegação, elementos de autoridade, calls to action e arquitetura visual.</p></article>
-          <article class="card step"><div class="icon">🚀</div><h3>Desenvolvimento</h3><p>Construção da solução com foco em experiência, clareza, identidade moderna e usabilidade.</p></article>
-          <article class="card step"><div class="icon">📈</div><h3>Evolução</h3><p>Ajustes, novas páginas, novos dashboards, refinamentos visuais e expansão do projeto.</p></article>
+          <article class="card step"><div class="icon">🔎</div><h3>Entendimento do negócio</h3><p>Cada solução nasce a partir do contexto, do momento e dos objetivos comerciais da sua empresa.</p></article>
+          <article class="card step"><div class="icon">🧩</div><h3>Clareza na comunicação</h3><p>A informação é organizada para valorizar sua marca e facilitar a compreensão da sua proposta.</p></article>
+          <article class="card step"><div class="icon">🚀</div><h3>Apresentação com impacto</h3><p>Visual, narrativa e experiência caminham juntos para gerar uma percepção mais forte e profissional.</p></article>
+          <article class="card step"><div class="icon">📈</div><h3>Foco em crescimento</h3><p>Cada entrega é pensada para apoiar expansão, relacionamento com clientes e geração de novas oportunidades.</p></article>
         </div>
       </div>
     </section>
 
-    <section id="contato">
+        <section id="contato">
       <div class="container">
-        <div class="cta">
-          <div>
-            <h2>Quer uma presença digital mais forte para sua empresa?</h2>
-            <p>Use essa base como apresentação inicial e, se quiser, depois eu posso evoluir para uma V3 com páginas internas, formulário funcional, cases reais, galeria de projetos e até versão com backend.</p>
+        <div class="section-head">
+          <h2>Vamos conversar sobre a sua empresa?</h2>
+          <p>Escolha a forma de contato que fizer mais sentido. Você pode enviar uma mensagem por e-mail com suas informações ou iniciar uma conversa agora mesmo pelo WhatsApp.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Enviar e-mail</h3>
+            <p>Preencha os campos abaixo. A mensagem já vem com um texto de interesse e você pode editar como preferir antes do envio.</p>
+            <form id="emailForm">
+              <div class="form-grid">
+                <div class="field">
+                  <label for="nomeEmpresa">Nome ou empresa</label>
+                  <input id="nomeEmpresa" name="nomeEmpresa" type="text" placeholder="Ex.: Gerber Souza ou Nome da Empresa">
+                </div>
+                <div class="field">
+                  <label for="emailContato">E-mail</label>
+                  <input id="emailContato" name="emailContato" type="email" placeholder="Ex.: contato@empresa.com">
+                </div>
+                <div class="field full">
+                  <label for="mensagemContato">Mensagem</label>
+                  <textarea id="mensagemContato" name="mensagemContato">Olá, tudo bem?
+
+Tenho interesse em conhecer melhor as soluções da Nexa Strategy para fortalecer a presença digital da minha empresa.
+
+Gostaria de receber mais informações sobre os serviços, entender as possibilidades de aplicação no meu negócio e avaliar uma proposta comercial.
+
+Fico no aguardo do retorno.</textarea>
+                  <div class="helper">Você pode editar a mensagem antes de enviar.</div>
+                </div>
+                <div class="field full">
+                  <button class="btn primary" type="submit">Abrir e-mail para envio</button>
+                </div>
+              </div>
+            </form>
           </div>
-          <a class="btn primary" href="mailto:contato@NexaStrategy.net?subject=Quero%20falar%20com%20a%20Nexa%20Strategy">Enviar e-mail</a>
+          <div class="contact-card whatsapp-box">
+            <div>
+              <h3>Falar no WhatsApp</h3>
+              <p>Prefere um contato mais rápido? Clique no botão abaixo para iniciar uma conversa diretamente pelo WhatsApp.</p>
+              <div class="whatsapp-card">
+                <strong style="display:block;margin-bottom:8px">Atendimento ágil</strong>
+                <p style="margin:0;color:var(--muted)">Converse com a Nexa Strategy e entenda qual solução faz mais sentido para o seu momento.</p>
+              </div>
+            </div>
+            <a class="btn whatsapp" href="https://wa.me/5511932147078?text=Olá,%20tenho%20interesse%20nas%20soluções%20da%20Nexa%20Strategy" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M19.11 17.19c-.27-.14-1.61-.79-1.86-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.19-1.33-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.48-.84-2.03-.22-.53-.44-.45-.61-.46h-.52c-.18 0-.48.07-.73.34s-.96.93-.96 2.26.98 2.61 1.11 2.79c.14.18 1.92 2.93 4.64 4.1.65.28 1.16.45 1.55.57.65.21 1.25.18 1.72.11.52-.08 1.61-.66 1.84-1.3.23-.64.23-1.18.16-1.3-.06-.11-.25-.18-.52-.32Z"></path><path d="M16.02 3.2c-6.99 0-12.66 5.66-12.66 12.64 0 2.23.58 4.4 1.69 6.32L3.2 28.8l6.81-1.79a12.71 12.71 0 0 0 6 1.52h.01c6.98 0 12.65-5.67 12.65-12.65A12.65 12.65 0 0 0 16.02 3.2Zm0 22.99h-.01a10.42 10.42 0 0 1-5.31-1.45l-.38-.22-4.04 1.06 1.08-3.94-.25-.4a10.38 10.38 0 0 1-1.6-5.55c0-5.75 4.68-10.42 10.44-10.42 2.79 0 5.41 1.09 7.38 3.05a10.35 10.35 0 0 1 3.05 7.37c0 5.76-4.68 10.43-10.43 10.43Z"></path></svg>Falar no WhatsApp</a>
+          </div>
         </div>
       </div>
     </section>
@@ -200,8 +245,8 @@
 
   <footer>
     <div class="container footer-row">
-      <p>© <span id="year"></span> Nexa Strategy. Portfólio V2.</p>
-      <a href="https://www.NexaStrategy.net">www.NexaStrategy.net</a>
+      <p>© <span id="year"></span> Nexa Strategy. Todos os direitos reservados.</p>
+      <a href="https://www.nexastrategy.onrender.com">www.nexastrategy.onrender.com</a>
     </div>
   </footer>
 
@@ -209,6 +254,21 @@
     function toggleMenu(){ document.getElementById('navLinks').classList.toggle('open'); }
     document.getElementById('year').textContent = new Date().getFullYear();
     document.querySelectorAll('.nav-links a').forEach(link=>link.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
+
+    const emailForm = document.getElementById('emailForm');
+    if(emailForm){
+      emailForm.addEventListener('submit', function(e){
+        e.preventDefault();
+        const nome = document.getElementById('nomeEmpresa').value.trim();
+        const email = document.getElementById('emailContato').value.trim();
+        const mensagem = document.getElementById('mensagemContato').value.trim();
+        const assunto = nome ? `Interesse nas soluções da Nexa Strategy - ${nome}` : 'Interesse nas soluções da Nexa Strategy';
+        const nl = String.fromCharCode(10);
+        const intro = [nome ? `Nome / Empresa: ${nome}` : '', email ? `E-mail para retorno: ${email}` : ''].filter(Boolean).join(nl);
+        const corpo = [intro, mensagem].filter(Boolean).join(nl + nl);
+        window.location.href = `mailto:contato@NexaStrategy.net?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
+      });
+    }
 
     const canvas = document.getElementById('bgCanvas');
     const ctx = canvas.getContext('2d');

@@ -1,11 +1,11 @@
 {
-  "name": "nexa-strategy-portfolio",
-  "version": "2.0.0",
-  "description": "Site institucional e portfólio da Nexa Strategy - V2",
+  "name": "nexa-strategy-site-comercial",
+  "version": "1.2.0",
+  "description": "Site comercial da Nexa Strategy com fundo interativo preservado",
   "scripts": {
     "build": "rm -rf dist && mkdir -p dist && cp -r index.html assets modelos_empresa dist/"
   },
-  "keywords": ["nexa", "strategy", "portfolio", "site", "render"],
+  "keywords": ["nexa", "strategy", "site", "render"],
   "author": "Nexa Strategy",
   "license": "MIT"
 }
