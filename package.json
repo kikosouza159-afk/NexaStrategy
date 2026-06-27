@@ -3,7 +3,7 @@
   "version": "1.2.0",
   "description": "Site comercial da Nexa Strategy com fundo interativo preservado",
   "scripts": {
-    "build": "rm -rf dist && mkdir -p dist && cp -r index.html assets modelos_empresa dist/"
+    "build": "rm -rf dist && mkdir -p dist && cp -r index.html assets modelos_empresa modelos_supermercado simulacao dist/"
   },
   "keywords": ["nexa", "strategy", "site", "render"],
   "author": "Nexa Strategy",

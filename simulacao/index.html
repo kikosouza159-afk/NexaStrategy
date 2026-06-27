@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexa Strategy | Simulação de Dashboards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css" />
+</head>
+<body>
+    <canvas id="bgCanvas"></canvas>
+    <div class="grid"></div>
+    <div class="glow"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="noise"></div>
+
+    <header class="topbar">
+        <a href="../index.html" class="brand">
+            <span class="brand-orb"></span>
+            <span>Nexa Simulação</span>
+        </a>
+        <nav class="menu" id="menu">
+            <a href="#solucao">Solução</a>
+            <a href="#demo">Demo</a>
+            <a href="#roi">ROI</a>
+            <a href="#planos">Planos</a>
+            <a href="../index.html">Site Nexa</a>
+            <a class="nav-cta" href="#contato">Solicitar proposta</a>
+        </nav>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+    </header>
+
+    <main id="home">
+        <section class="hero section-grid">
+            <div class="hero-copy reveal">
+                <div class="eyebrow">BI • IA • Automação • War Room</div>
+                <h1>Dashboards que não ficam parados olhando para você.</h1>
+                <p>
+                    Criamos cockpits vivos para operação, diretoria e estratégia. Indicadores em tempo real,
+                    alertas inteligentes e leitura executiva para transformar dados em ação antes do café esfriar.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn primary magnetic" href="#demo">Ver experiência</a>
+                    <a class="btn secondary magnetic" href="#roi">Calcular economia</a>
+                </div>
+                <div class="trust-line">
+                    <span></span> Dashboards para cobrança, vendas, operação, CX e performance.
+                </div>
+            </div>
+
+            <div class="hero-panel reveal">
+                <div class="hologram-card tilt-card" data-tilt>
+                    <div class="panel-header">
+                        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                        <b>Resultado ao vivo</b>
+                    </div>
+                    <div class="orbit-widget">
+                        <div class="orbit-ring r1"></div>
+                        <div class="orbit-ring r2"></div>
+                        <div class="orbit-core">BI</div>
+                    </div>
+                    <div class="mini-kpis">
+                        <div><small>Hit Rate</small><strong id="heroHit">3.9%</strong></div>
+                        <div><small>CPC</small><strong id="heroCpc">+18%</strong></div>
+                        <div><small>ROI</small><strong id="heroRoi">34%</strong></div>
+                    </div>
+                    <button class="pulse-button" id="randomizeHero">Simular cenário</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="metrics reveal" aria-label="Métricas">
+            <article><span data-count="128">0</span><small>dashboards publicados</small></article>
+            <article><span data-count="42">0</span><small>clientes monitorados</small></article>
+            <article><span data-count="87">0</span><small>% rotinas automatizadas</small></article>
+            <article><span data-count="99.9">0</span><small>% disponibilidade</small></article>
+        </section>
+
+        <section class="section" id="solucao">
+            <div class="section-title reveal">
+                <span class="eyebrow">Solução</span>
+                <h2>Um ecossistema visual para caçar gargalos.</h2>
+                <p>Cada módulo foi pensado para transformar operação em cockpit. Menos planilha zumbi, mais decisão viva.</p>
+            </div>
+            <div class="feature-grid">
+                <article class="feature-card reveal tilt-card" data-module="funil">
+                    <div class="icon">⬡</div>
+                    <h3>Funil inteligente</h3>
+                    <p>Discado, atendido, CPC, acordo, conversão e leitura por carteira, campanha ou canal.</p>
+                </article>
+                <article class="feature-card reveal tilt-card" data-module="alerta">
+                    <div class="icon">◈</div>
+                    <h3>Alertas operacionais</h3>
+                    <p>Detecta queda de produção, perda, abandono e desvio de TMA com gatilhos visuais.</p>
+                </article>
+                <article class="feature-card reveal tilt-card" data-module="ia">
+                    <div class="icon">✦</div>
+                    <h3>Insights com IA</h3>
+                    <p>Resumo automático do que mudou, por que mudou e qual ação tomar.</p>
+                </article>
+                <article class="feature-card reveal tilt-card" data-module="warroom">
+                    <div class="icon">☷</div>
+                    <h3>War room executivo</h3>
+                    <p>Tela premium para reunião, com priorização, ranking e mapa de oportunidade.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section demo-shell" id="demo">
+            <div class="section-title reveal">
+                <span class="eyebrow">Demo interativa</span>
+                <h2>Clique nos módulos e veja o painel reagir.</h2>
+            </div>
+            <div class="dashboard-demo reveal">
+                <aside class="demo-sidebar">
+                    <button class="demo-tab active" data-view="operacao">Operação</button>
+                    <button class="demo-tab" data-view="executivo">Executivo</button>
+                    <button class="demo-tab" data-view="financeiro">Financeiro</button>
+                    <button class="demo-tab" data-view="ia">IA Insights</button>
+                </aside>
+                <div class="demo-content">
+                    <div class="demo-top">
+                        <div>
+                            <small>Modo atual</small>
+                            <h3 id="demoTitle">Cockpit Operacional</h3>
+                        </div>
+                        <span id="demoStatus">Tempo real</span>
+                    </div>
+                    <div class="chart-zone" id="chartZone">
+                        <span style="height: 42%"></span>
+                        <span style="height: 70%"></span>
+                        <span style="height: 56%"></span>
+                        <span style="height: 88%"></span>
+                        <span style="height: 62%"></span>
+                        <span style="height: 79%"></span>
+                        <span style="height: 49%"></span>
+                    </div>
+                    <div class="demo-cards">
+                        <article><small>Atendidas</small><strong id="demoA">48.2k</strong></article>
+                        <article><small>CPC</small><strong id="demoB">12.7k</strong></article>
+                        <article><small>Acordos</small><strong id="demoC">3.4k</strong></article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section roi-section" id="roi">
+            <div class="roi-card reveal">
+                <div>
+                    <span class="eyebrow">Simulador</span>
+                    <h2>Quanto custa não enxergar o resultado?</h2>
+                    <p>Informe horas gastas por mês montando relatórios, custo hora médio e ganho esperado com automação.</p>
+                </div>
+                <form class="roi-form" id="roiForm">
+                    <label>Horas/mês em relatórios <input type="number" name="hours" value="120"></label>
+                    <label>Custo hora médio R$ <input type="number" name="cost" value="55"></label>
+                    <label>Ganho esperado % <input type="number" name="improvement" value="40"></label>
+                    <button class="btn primary" type="submit">Calcular ROI</button>
+                </form>
+                <div class="roi-result" id="roiResult">
+                    <small>Economia estimada</small>
+                    <strong>R$ 2.640/mês</strong>
+                    <span>R$ 31.680/ano</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="planos">
+            <div class="section-title reveal">
+                <span class="eyebrow">Planos</span>
+                <h2>Escolha o motor da nave.</h2>
+            </div>
+            <div class="pricing-grid">
+                <article class="price-card reveal">
+                    <span class="plan-tag">Para times iniciando</span>
+                    <h3>Pulse Start</h3>
+                    <strong>R$ 1.490/mês</strong>
+                    <ul>
+                        <li>Dashboard executivo</li>
+                        <li>Funil de resultado</li>
+                        <li>Alertas básicos</li>
+                        <li>Atualização diária</li>
+                    </ul>
+                    <a class="btn secondary" href="#contato">Quero esse</a>
+                </article>
+                <article class="price-card reveal featured">
+                    <span class="plan-tag">Mais vendido</span>
+                    <h3>Command Center</h3>
+                    <strong>R$ 3.900/mês</strong>
+                    <ul>
+                        <li>Tempo real</li>
+                        <li>Alertas inteligentes</li>
+                        <li>Cockpit por operação</li>
+                        <li>Ranking por carteira</li>
+                        <li>Integração SQL/API</li>
+                    </ul>
+                    <a class="btn secondary" href="#contato">Quero esse</a>
+                </article>
+                <article class="price-card reveal">
+                    <span class="plan-tag">Alta performance</span>
+                    <h3>Neural BI</h3>
+                    <strong>Sob consulta</strong>
+                    <ul>
+                        <li>Previsão de resultado</li>
+                        <li>IA para insights</li>
+                        <li>Mapa de oportunidade</li>
+                        <li>Automação de relatórios</li>
+                        <li>War room executivo</li>
+                    </ul>
+                    <a class="btn secondary" href="#contato">Quero esse</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="section contact-section" id="contato">
+            <div class="contact-card reveal">
+                <div>
+                    <span class="eyebrow">Contato</span>
+                    <h2>Solicite uma apresentação.</h2>
+                    <p>Preencha os dados e receba uma proposta para transformar seu resultado em cockpit.</p>
+                </div>
+                <form id="leadForm" class="lead-form">
+                    <input name="name" placeholder="Seu nome" required>
+                    <input name="email" type="email" placeholder="E-mail" required>
+                    <input name="company" placeholder="Empresa" required>
+                    <select name="interest">
+                        <option>Dashboard Executivo</option>
+                        <option>Cockpit Operacional</option>
+                        <option>Automação + IA</option>
+                        <option>Projeto completo</option>
+                    </select>
+                    <button class="btn primary" type="submit">Enviar sinal</button>
+                    <p id="leadMessage" class="form-message"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <span>Nexa Strategy © <span id="simYear"></span></span>
+        <span>Simulação integrada ao ecossistema Nexa Strategy.</span>
+    </footer>
+
+    <script src="static/js/main.js"></script>
+</body>
+</html>
